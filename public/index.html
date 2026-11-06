@@ -5,18 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Seabright Creative | Independent eyewear representation, Canada</title>
 <meta name="description" content="Seabright Creative introduces independent and luxury eyewear brands to opticians across Canada.">
-
-<!-- Open Graph / Social Link Preview -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://sollays.com/">
 <meta property="og:title" content="Seabright Creative | Independent eyewear representation, Canada">
 <meta property="og:description" content="Seabright Creative introduces independent and luxury eyewear brands to opticians across Canada.">
-
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Seabright Creative | Independent eyewear representation, Canada">
 <meta name="twitter:description" content="Seabright Creative introduces independent and luxury eyewear brands to opticians across Canada.">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -32,153 +27,12 @@ body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 var(--san
 a{color:inherit}
 :focus-visible{outline:2px solid var(--ink);outline-offset:3px}
 .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-header .wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 36px 24px;
-}
-
-.mark {
-  font-family: var(--sans);
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--ink);
-  transition: opacity 0.2s ease;
-.mark:hover {
-  opacity: 0.8;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  font-family: var(--sans);
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--muted);
-  transition: color 0.2s ease;
-}
-
-nav a:hover {
-  color: var(--ink);
-  text-decoration: none;
-}
-
-/* Hero Graphic & Animations */
-.hero {
-  position: relative;
-}
-
-.heroart {
-  position: absolute;
-  right: 24px;
-  top: 24px;
-  width: min(40%, 440px);
-  height: auto;
-  pointer-events: none;
-}
-
-.heroart .ln {
-  fill: none;
-  stroke: var(--ink);
-  stroke-width: 1.8;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: 1;
-  stroke-dashoffset: 1;
-  animation: draw 2.2s ease-out forwards;
-}
-
-.heroart .h {
-  stroke: var(--line);
-  stroke-width: 1;
-  animation-duration: 2.6s;
-}
-
-.heroart .b {
-  animation-delay: 0.9s;
-}
-
-.heroart .c {
-  stroke-width: 4.5;
-  animation-delay: 1.6s;
-  animation-duration: 1.8s;
-}
-
-.heroart .d {
-  stroke: var(--lens);
-  stroke-width: 1.2;
-  animation-delay: 2s;
-}
-
-.heroart .tint {
-  opacity: 0;
-  animation: fadein 1.2s ease-out 2.8s forwards;
-}
-
-@keyframes draw {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes fadein {
-  to {
-    opacity: 1;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .heroart .ln {
-    animation: none;
-    stroke-dashoffset: 0;
-  }
-  .heroart .tint {
-    animation: none;
-    opacity: 1;
-  }
-}
-
-@media (max-width: 980px) {
-  .heroart {
-    display: none;
-  }
-}
-}
-
-.mark:hover {
-  opacity: 0.8;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  font-family: var(--sans);
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--muted);
-  transition: color 0.2s ease;
-}
-
-nav a:hover {
-  color: var(--ink);
-  text-decoration: none;
-}
+header .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between;align-items:center;padding-top:36px;padding-bottom:12px}
+.mark{font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:var(--ink);transition:opacity .2s ease}
+.mark:hover{opacity:.8}
+nav{display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px;font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.04em}
+nav a{text-decoration:none;color:var(--muted);transition:color .2s ease}
+nav a:hover{color:var(--ink)}
 .hero{padding:72px 0 40px}
 h1{font:400 clamp(40px,7vw,84px)/1.02 var(--serif);letter-spacing:-.01em;margin:0 0 24px;max-width:15ch}
 .lede{max-width:52ch;color:var(--muted);font-size:19px;margin:0 0 32px}
@@ -209,6 +63,17 @@ p{margin:0 0 16px;max-width:60ch}
 footer{border-top:1px solid var(--line);padding:40px 0 56px;color:var(--muted);font-size:15px}
 footer .wrap{display:flex;flex-wrap:wrap;gap:16px 48px;justify-content:space-between}
 @media (max-width:760px){.index{grid-template-columns:repeat(2,1fr);gap:0 20px}.cols,.trio,.forms{grid-template-columns:1fr}.hero{padding-top:48px}.panel{padding:28px 22px}}
+.hero{position:relative}
+.heroart{position:absolute;right:24px;top:24px;width:min(40%,440px);height:auto;pointer-events:none}
+.heroart .ln{fill:none;stroke:var(--ink);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.2s ease-out forwards}
+.heroart .h{stroke:var(--line);stroke-width:1;animation-duration:2.6s}
+.heroart .b{animation-delay:.9s}
+.heroart .c{stroke-width:4.5;animation-delay:1.6s;animation-duration:1.8s}
+.heroart .d{stroke:var(--lens);stroke-width:1.2;animation-delay:2s}
+.heroart .tint{opacity:0;animation:fadein 1.2s ease-out 2.8s forwards}
+@keyframes fadein{to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.heroart .ln{animation:none;stroke-dashoffset:0}.heroart .tint{animation:none;opacity:1}}
+@media (max-width:980px){.heroart{display:none}}
 </style>
 </head>
 <body>
@@ -219,7 +84,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px 48px;justify-content:space-bet
 </nav></div></header>
 
 <main id="top">
-<div class="wrap hero" id="brands">
+<div class="wrap hero" id="brands"><svg class="heroart" viewBox="0 0 480 520" aria-hidden="true"><defs><radialGradient id="lg" cx="35%" cy="30%" r="80%"><stop offset="0" style="stop-color:var(--lens);stop-opacity:.55"/><stop offset="1" style="stop-color:var(--lens);stop-opacity:.06"/></radialGradient><clipPath id="cl"><circle cx="184" cy="215" r="42"/></clipPath><clipPath id="cr"><circle cx="296" cy="215" r="42"/></clipPath></defs><circle class="ln h" pathLength="1" cx="240" cy="236" r="208"/><path class="ln a" pathLength="1" d="M134 200C132 250 144 292 168 326L196 352Q222 374 240 374Q258 374 284 352L312 326C336 292 348 250 346 200"/><path class="ln a" pathLength="1" d="M130 200C120 120 170 64 248 62C330 62 366 120 350 200"/><path class="ln a" pathLength="1" d="M346 190C340 150 300 118 240 120C190 122 160 150 138 196"/><path class="ln a" pathLength="1" d="M138 196L140 238"/><path class="ln a" pathLength="1" d="M342 196L340 238"/><path class="ln a" pathLength="1" d="M134 210C120 206 116 238 128 258"/><path class="ln a" pathLength="1" d="M346 210C360 206 364 238 352 258"/><path class="ln a" pathLength="1" d="M204 356C204 392 198 416 182 436"/><path class="ln a" pathLength="1" d="M276 356C276 392 282 416 298 436"/><path class="ln a" pathLength="1" d="M182 436C146 448 108 464 62 500"/><path class="ln a" pathLength="1" d="M298 436C334 448 372 464 418 500"/><path class="ln a" pathLength="1" d="M182 436L226 486"/><path class="ln a" pathLength="1" d="M298 436L254 486"/><path class="ln b" pathLength="1" d="M200 96C170 110 150 140 142 184"/><path class="ln b" pathLength="1" d="M250 84C214 92 180 116 164 150"/><path class="ln b" pathLength="1" d="M290 90C320 100 338 130 344 176"/><path class="ln b" pathLength="1" d="M150 166Q186 150 218 160"/><path class="ln b" pathLength="1" d="M262 160Q294 150 330 166"/><path class="ln b" pathLength="1" d="M160 219Q184 202 208 219"/><path class="ln b" pathLength="1" d="M272 219Q296 202 320 219"/><path class="ln b" pathLength="1" d="M166 223Q184 234 202 223"/><path class="ln b" pathLength="1" d="M278 223Q296 234 314 223"/><circle class="ln b" pathLength="1" cx="184" cy="216" r="6"/><circle class="ln b" pathLength="1" cx="296" cy="216" r="6"/><path class="ln b" pathLength="1" d="M150 252Q176 278 206 284"/><path class="ln b" pathLength="1" d="M330 252Q304 278 274 284"/><path class="ln b" pathLength="1" d="M241 238C240 262 237 278 232 291Q240 299 249 291"/><path class="ln b" pathLength="1" d="M210 331Q226 319 240 327Q254 319 270 331"/><path class="ln b" pathLength="1" d="M210 331Q240 362 270 331"/><path class="ln b" pathLength="1" d="M212 332Q240 338 268 332"/><circle class="ln b" pathLength="1" cx="355" cy="264" r="3"/><circle class="ln c" pathLength="1" cx="184" cy="215" r="45"/><circle class="ln c" pathLength="1" cx="296" cy="215" r="45"/><path class="ln c" pathLength="1" d="M228 209Q240 199 252 209"/><path class="ln c" pathLength="1" d="M139 213L128 209"/><path class="ln c" pathLength="1" d="M341 213L352 209"/><circle class="ln d" pathLength="1" cx="184" cy="215" r="39"/><circle class="ln d" pathLength="1" cx="296" cy="215" r="39"/><g class="tint"><circle cx="184" cy="215" r="42" fill="url(#lg)"/><circle cx="296" cy="215" r="42" fill="url(#lg)"/><g clip-path="url(#cl)"><path d="M150 258L184 172L198 172L164 258Z" style="fill:var(--bg);fill-opacity:.35"/></g><g clip-path="url(#cr)"><path d="M262 258L296 172L310 172L276 258Z" style="fill:var(--bg);fill-opacity:.35"/></g></g></svg>
 <h1>Independent eyewear, placed where it belongs.</h1>
 <p class="lede">Seabright Creative introduces a short list of independent and luxury frame makers to the opticians who will do them justice, in person, from Vancouver to Montréal.</p>
 <div class="cta"><a class="btn solid" href="#retailers">I’m an optician</a><a class="btn" href="#for-brands">I’m a brand</a></div>
