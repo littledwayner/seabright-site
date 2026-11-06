@@ -32,11 +32,48 @@ body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 var(--san
 a{color:inherit}
 :focus-visible{outline:2px solid var(--ink);outline-offset:3px}
 .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-header .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between;align-items:baseline;padding-top:28px}
-.mark{font:400 26px/1 var(--serif);text-decoration:none;letter-spacing:.01em}
-nav{display:flex;flex-wrap:wrap;gap:6px 24px;font-size:15px}
-nav a{text-decoration:none;color:var(--muted)}
-nav a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:4px}
+header .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 36px 24px;
+}
+
+.mark {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+  transition: opacity 0.2s ease;
+}
+
+.mark:hover {
+  opacity: 0.8;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--ink);
+  text-decoration: none;
+}
 .hero{padding:72px 0 40px}
 h1{font:400 clamp(40px,7vw,84px)/1.02 var(--serif);letter-spacing:-.01em;margin:0 0 24px;max-width:15ch}
 .lede{max-width:52ch;color:var(--muted);font-size:19px;margin:0 0 32px}
