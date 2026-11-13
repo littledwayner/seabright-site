@@ -28,6 +28,10 @@ nav a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:4px
 .crumb{font-size:15px;color:var(--muted);margin:40px 0 0}
 .hero{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;padding:24px 0 64px}
 h1{font:400 clamp(56px,10vw,120px)/.95 var(--serif);letter-spacing:-.01em;margin:0 0 12px}
+.brand-link{text-decoration:none;display:inline-block;transition:opacity .2s ease}
+.brand-link:hover{opacity:.78}
+.art-link{display:block;transition:opacity .2s ease}
+.art-link:hover{opacity:.78}
 .sub{font:400 clamp(22px,3vw,30px)/1.25 var(--serif);color:var(--muted);margin:0 0 24px}
 .lede{max-width:46ch;font-size:19px;margin:0 0 28px}
 .btn{display:inline-block;padding:13px 22px;border:1px solid var(--ink);border-radius:2px;text-decoration:none;font-weight:500;font-size:16px;background:var(--ink);color:var(--bg);cursor:pointer;font-family:inherit}
@@ -69,12 +73,12 @@ figcaption{font-size:13px;color:var(--muted);margin-top:8px}
 <p class="crumb"><a href="/">Brands</a> / MYKITA</p>
 <div class="hero">
 <div>
-<h1>MYKITA</h1>
+<h1><a class="brand-link" href="https://mykita.com" target="_blank" rel="noopener noreferrer">MYKITA</a></h1>
 <p class="sub">Precision, made by hand in Berlin.</p>
 <p class="lede">Frames with the exactness of engineering and the patience of craft, designed and assembled together under a single roof.</p>
 <a class="btn" href="#line-sheet">Request more information</a>
 </div>
-<svg class="art" viewBox="0 0 240 110" role="img" aria-label="Line drawing of a round frame"><path pathLength="1" d="M20 55a38 38 0 1 0 76 0a38 38 0 1 0 -76 0Z"/><path pathLength="1" d="M144 55a38 38 0 1 0 76 0a38 38 0 1 0 -76 0Z"/><path pathLength="1" d="M96 50Q120 38 144 50"/><path pathLength="1" d="M20 48L4 40M220 48L236 40"/></svg>
+<a class="art-link" href="https://mykita.com" target="_blank" rel="noopener noreferrer" aria-label="Visit MYKITA official website"><svg class="art" viewBox="0 0 240 110" role="img" aria-hidden="true"><path pathLength="1" d="M20 55a38 38 0 1 0 76 0a38 38 0 1 0 -76 0Z"/><path pathLength="1" d="M144 55a38 38 0 1 0 76 0a38 38 0 1 0 -76 0Z"/><path pathLength="1" d="M96 50Q120 38 144 50"/><path pathLength="1" d="M20 48L4 40M220 48L236 40"/></svg></a>
 </div>
 <dl class="facts">
 <div><dt>Origin</dt><dd>Berlin, Germany</dd></div>
@@ -119,10 +123,4 @@ figcaption{font-size:13px;color:var(--muted);margin-top:8px}
 </main>
 
 <footer><div class="wrap">
-<div><strong>Seabright Creative</strong><br>Independent eyewear representation<br>Vancouver, British Columbia</div>
-<div>hello@seabrighteyewear.ca<br>000 000 0000</div>
-<div>© 2026 Seabright Creative Inc.</div>
-</div></footer>
-<script>document.querySelector('form').addEventListener('submit',function(e){e.preventDefault();this.querySelector('.status').textContent='Thanks. This is a mock-up, so nothing was sent.';this.reset()})</script>
-</body>
-</html>
+<div><strong>Seab
