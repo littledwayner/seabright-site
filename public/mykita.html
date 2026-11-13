@@ -7,10 +7,10 @@
 <meta name="description" content="MYKITA frames, made by hand in Berlin, represented in Canada by Seabright Creative.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500&family=Instrument+Serif&family=Instrument+Sans:wght@400;500;600&display=block" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Instrument+Sans:wght@400;500;600&display=block" rel="stylesheet">
 <style>
 :root{--bg:#EDF1F0;--ink:#0F2530;--muted:#4C6169;--line:#C5D2D0;--lens:#8CC1B6;--panel:#E1E8E7;
---serif:"Instrument Serif",Georgia,"Times New Roman",serif;--sans:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;--brand:"Barlow","DIN Alternate","Bahnschrift",sans-serif;
+--serif:"Instrument Serif",Georgia,"Times New Roman",serif;--sans:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
 color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1D25;--ink:#E6EEEC;--muted:#9DB2B3;--line:#2A3F48;--lens:#4F8F85;--panel:#14262F;color-scheme:dark}}
 :root[data-theme="dark"]{--bg:#0E1D25;--ink:#E6EEEC;--muted:#9DB2B3;--line:#2A3F48;--lens:#4F8F85;--panel:#14262F;color-scheme:dark}
@@ -27,9 +27,10 @@ nav a{text-decoration:none;color:var(--muted)}
 nav a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:4px}
 .crumb{font-size:15px;color:var(--muted);margin:40px 0 0}
 .hero{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;padding:24px 0 64px}
-h1{font:300 clamp(54px,9vw,108px)/.95 var(--brand);letter-spacing:.08em;margin:0 0 16px}
+h1{margin:0 0 24px;line-height:0}
 .brand-link{text-decoration:none;display:inline-block;transition:opacity .2s ease}
 .brand-link:hover{opacity:.78}
+.wordmark{display:block;width:min(380px,78vw);height:auto;overflow:visible}
 .art-link{display:block;transition:opacity .2s ease}
 .art-link:hover{opacity:.78}
 .sub{font:400 clamp(22px,3vw,30px)/1.25 var(--serif);color:var(--muted);margin:0 0 24px}
@@ -73,7 +74,7 @@ figcaption{font-size:13px;color:var(--muted);margin-top:8px}
 <p class="crumb"><a href="/">Brands</a> / MYKITA</p>
 <div class="hero">
 <div>
-<h1><a class="brand-link" href="https://mykita.com" target="_blank" rel="noopener noreferrer">MYKITA</a></h1>
+<h1><a class="brand-link" href="https://mykita.com" target="_blank" rel="noopener noreferrer" aria-label="MYKITA"><svg class="wordmark" viewBox="0 0 434 86" role="img" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="5.2" stroke-linecap="butt" stroke-linejoin="miter"><path d="M4 82V6L37 64L70 6V82"/><path d="M96 4L124 46L152 4M124 46V82"/><path d="M178 4V82M224 4L183 45L226 82"/><path d="M254 4V82"/><path d="M276 6H332M304 6V82"/><path d="M350 82L386 6L422 82M361 59H411"/></svg></a></h1>
 <p class="sub">Precision, made by hand in Berlin.</p>
 <p class="lede">Frames with the exactness of engineering and the patience of craft, designed and assembled together under a single roof.</p>
 <a class="btn" href="#line-sheet">Request more information</a>
@@ -107,6 +108,7 @@ figcaption{font-size:13px;color:var(--muted);margin-top:8px}
 <div><h2>On your wall.</h2></div>
 <div>
 <p>For the customer who wants design without announcement. MYKITA rewards a closer look, which makes it a natural fit for shops that fit and advise in person.</p>
+<p class="note">Draft copy based on public sources. To be confirmed against MYKITA’s official materials before publishing.</p>
 </div><figure><img src="/images/mykita-wall.jpeg" alt="MYKITA frames displayed on an optical shop wall" width="1600" height="900" onerror="this.closest('figure').remove()"><figcaption>Photo: MYKITA</figcaption></figure></div></section>
 
 <section id="line-sheet" style="padding-top:0"><div class="wrap">
