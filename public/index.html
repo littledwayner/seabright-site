@@ -3,32 +3,107 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Seabright Creative | Independent eyewear representation, Canada</title>
-<meta name="description" content="Seabright Creative introduces independent and luxury eyewear brands to opticians across Canada.">
+<title>Seabright Collective | Independent eyewear representation, Canada</title>
+<meta name="description" content="Seabright Collective introduces independent and luxury eyewear brands to opticians across Canada.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sollays.com/">
+<meta property="og:title" content="Seabright Collective | Independent eyewear representation, Canada">
+<meta property="og:description" content="Seabright Collective introduces independent and luxury eyewear brands to opticians across Canada.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Seabright Collective | Independent eyewear representation, Canada">
+<meta name="twitter:description" content="Seabright Collective introduces independent and luxury eyewear brands to opticians across Canada.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Instrument+Sans:wght@400;500&display=block" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Instrument+Sans:wght@400;500;600&display=block" rel="stylesheet">
 <style>
-:root{--bg:#EDF1F0;--ink:#0F2530;--panel:#E1E8E7;--serif:"Instrument Serif",Georgia,serif;--sans:"Instrument Sans",system-ui,sans-serif;color-scheme:light}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1D25;--ink:#E6EEEC;--panel:#14262F;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#0E1D25;--ink:#E6EEEC;--panel:#14262F;color-scheme:dark}
-*,*::before,*::after{box-sizing:border-box}
-html,body{height:100%;margin:0;background:var(--bg);color:var(--ink)}
-body{display:grid;place-items:center;padding:24px;padding-top:max(24px,env(safe-area-inset-top));padding-bottom:max(24px,env(safe-area-inset-bottom))}
-.splash{position:relative;display:block;width:min(440px,88vw);aspect-ratio:4/5;max-height:82vh;background:var(--panel);overflow:hidden;text-decoration:none}
-.splash img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.16,1,.3,1)}
-.splash::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.38) 0%,transparent 35%);pointer-events:none}
-.enter{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);z-index:2;font:400 20px/1 var(--serif);letter-spacing:.03em;color:#FFFFFF;text-transform:lowercase;transition:opacity .25s ease}
-.splash:hover img,.splash:focus-visible img{transform:scale(1.015)}
-.splash:hover .enter,.splash:focus-visible .enter{opacity:.75}
-.splash:focus-visible{outline:2px solid var(--ink);outline-offset:6px}
-@media (prefers-reduced-motion:reduce){.splash img{transition:none}.splash:hover img{transform:none}}
+:root{--bg:#EDF1F0;--ink:#0F2530;--muted:#4C6169;--line:#C5D2D0;--lens:#8CC1B6;--panel:#E1E8E7;
+--serif:"Instrument Serif",Georgia,"Times New Roman",serif;--sans:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1D25;--ink:#E6EEEC;--muted:#9DB2B3;--line:#2A3F48;--lens:#4F8F85;--panel:#14262F;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0E1D25;--ink:#E6EEEC;--muted:#9DB2B3;--line:#2A3F48;--lens:#4F8F85;--panel:#14262F;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);background:var(--bg)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 var(--sans)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+header .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between;align-items:center;padding-top:36px;padding-bottom:12px}
+.mark{display:inline-block;margin-left:-0.02em;font-family:var(--sans);font-size:15px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--ink);transition:opacity .2s ease}
+.mark:hover{opacity:.8}
+nav{display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px;font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.04em}
+nav a{text-decoration:none;color:var(--muted);transition:color .2s ease}
+nav a:hover{color:var(--ink)}
+.hero{padding:72px 0 40px}
+h1{font:400 clamp(40px,7vw,84px)/1.02 var(--serif);letter-spacing:-.01em;margin:0 0 24px;max-width:15ch}
+.lede{max-width:52ch;color:var(--muted);font-size:19px;margin:0 0 32px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 22px;border:1px solid var(--ink);border-radius:2px;text-decoration:none;font-weight:500;font-size:16px;text-align:center}
+.btn.solid{background:var(--ink);color:var(--bg)}
+.btn:hover{background:var(--lens);color:#0F2530;border-color:var(--lens)}
+.btn:disabled{opacity:.6;cursor:wait}
+.index{display:grid;grid-template-columns:repeat(3,1fr);gap:0 32px;margin:48px 0 0;padding:0;list-style:none}
+.index li{border-top:1px solid var(--line)}
+.index a{display:block;padding:20px 0 22px;text-decoration:none;text-align:center}
+.index svg{display:block;width:100%;max-width:230px;height:auto;margin:0 auto 12px;overflow:visible}
+.f path{fill:transparent;stroke:var(--ink);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:fill .25s}
+.index a:hover .f path:not(.br),.index a:focus-visible .f path:not(.br){fill:var(--lens)}
+.index b{display:block;font-weight:500;font-size:18px}
+.draw path{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.4s ease-out .1s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.draw path{animation:none;stroke-dashoffset:0}.f path{transition:none}}
+.note{font-size:14px;color:var(--muted);margin:8px 0 0}
+section{padding:72px 0;border-top:1px solid var(--line)}
+h2{font:400 clamp(30px,4.4vw,48px)/1.1 var(--serif);margin:0 0 20px;max-width:20ch}
+.cols{display:grid;grid-template-columns:1fr 1.2fr;gap:40px 64px}
+p{margin:0 0 16px;max-width:60ch}
+.steps{margin:0;padding:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;padding:0 0 22px 48px;position:relative;max-width:56ch}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:30px;height:30px;border:1px solid var(--ink);border-radius:50%;display:grid;place-items:center;font-size:14px}
+.steps b{display:block;font-weight:600}
+.panel{background:var(--panel);padding:40px}.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin:28px 0}h3{font:500 20px/1.3 var(--sans);margin:0 0 8px}.trio p{font-size:16px;margin:0}.forms{display:grid;grid-template-columns:1fr 1fr;gap:56px}form{display:grid;gap:20px;margin-top:24px}label{display:block;font-size:14px;color:var(--muted);margin-bottom:4px}input[type=text],input[type=email],select,textarea{width:100%;font:inherit;color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--ink);border-radius:0;padding:8px 0}textarea{min-height:72px;resize:vertical}fieldset{border:0;padding:0;margin:0}legend{font-size:14px;color:var(--muted);margin-bottom:8px;padding:0}.checks{display:grid;grid-template-columns:repeat(2,1fr);gap:8px 16px}.checks label{display:flex;gap:8px;align-items:center;color:var(--ink);font-size:16px;margin:0}button.btn{cursor:pointer;font:inherit;font-weight:500;justify-self:start}.status{min-height:1.4em;margin:0;font-size:15px}.field-err{display:block;font-size:13px;color:#b91c1c;margin-top:4px}
+footer{border-top:1px solid var(--line);padding:40px 0 56px;color:var(--muted);font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px 48px;justify-content:space-between}
+@media (max-width:760px){
+  .wrap{padding:0 18px}
+  header .wrap{padding-top:24px;padding-bottom:8px;gap:12px 16px}
+  .mark{font-size:14px}
+  nav{width:100%;justify-content:space-between;gap:8px 10px;font-size:12.5px;letter-spacing:.02em}
+  .hero{padding:36px 0 32px}
+  .lede{font-size:17px;margin-bottom:24px}
+  .cta{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .cta .btn{width:100%;padding:12px 14px;font-size:15px}
+  .index{grid-template-columns:repeat(2,1fr);gap:0 16px;margin-top:36px}
+  .index a{padding:16px 4px 18px}
+  .index svg{max-width:136px;margin-bottom:8px}
+  .index b{font-size:15px}
+  .cols,.trio,.forms{grid-template-columns:1fr}
+  section{padding:48px 0}
+  .panel{padding:28px 20px}
+  .checks{grid-template-columns:1fr}
+}
+@media (max-width:380px){
+  nav{justify-content:flex-start;gap:8px 14px}
+  .cta{grid-template-columns:1fr}
+}
+.hero{position:relative}
+.heroart{position:absolute;right:24px;top:24px;width:min(40%,440px);height:auto;pointer-events:none}
+.heroart .ln{fill:none;stroke:var(--ink);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.2s ease-out forwards}
+.heroart .h{stroke:var(--line);stroke-width:1;animation-duration:2.6s}
+.heroart .b{animation-delay:.9s}
+.heroart .c{stroke-width:4.5;animation-delay:1.6s;animation-duration:1.8s}
+.heroart .d{stroke:var(--lens);stroke-width:1.2;animation-delay:2s}
+.heroart .tint{opacity:0;animation:fadein 1.2s ease-out 2.8s forwards}
+@keyframes fadein{to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.heroart .ln{animation:none;stroke-dashoffset:0}.heroart .tint{animation:none;opacity:1}}
+@media (max-width:980px){.heroart{display:none}}
 </style>
 </head>
 <body>
-<a class="splash" href="/home" aria-label="Enter Seabright Creative">
-  <img src="/images/landing.jpg" alt="Seabright Creative">
-  <span class="enter">enter</span>
-</a>
-</body>
-</html>
+<header><div class="wrap">
+<a class="mark" href="/home">Seabright Collective</a>
+<nav aria-label="Main">
+<a href="#brands">Brands</a><a href="#retailers">For opticians</a><a href="#for-brands">For brands</a><a href="#stockists">Stockists</a><a href="#contact">Contact</a>
+</nav></div></header>
+
+<main id="top">
+<div class="wrap hero" id="brands"><svg class="heroart" viewBox="0 0 480 520" aria-hidden="true"><defs><radialGradient id="lg" cx="35%" cy="30%" r="80%"><stop offset="0" style="stop-color:var(--lens);stop-opacity:.55"/><stop offset="1" style="stop-color:var(--lens);stop-opacity:.06"/></radialGradient><clipPath id="cl"><circle cx="184" cy="215" r="42"/></clipPath><clipPath id="cr"><circle cx="296" cy="215" r="42"/></clipPath></defs><circle class="ln h" pathLength="1" cx="240" cy="236" r="208"/><path class="ln a" pathLength="1" d="M134 200C132 250 144 292 168 326L196 352Q222 374 240 374Q258 374 284 352L312 326C336 292 348 250 346 200"/><path class="ln a" pathLength="1" d="M130 200C120 120 170 64 248 62C330 62 366 120 350 200"/><path class="ln a" pathLength="1" d="M346 190C340 150 300 118 240 120C190 122 160 150 138 196"/><path class="ln a" pathLength="1" d="M138 196L140 238"/><path class="ln a" pathLength="1" d="M342 196L340 238"/><path class="ln a" pathLength="1" d="M134 210C120 206 116 238 128 258"/><path class="ln a" pathLength="1" d="M346 210C360 206 364 238 352 258"/><path class="ln a" pathLength="1" d="M204 356C204 392 198 416 182 436"/><path class="ln a" pathLength="1" d="M276 356C276 392 282 416 298 436"/><path class="ln a" pathLength="1" d="M182 436C146 448 108 464 62 500"/><path class="ln a" pathLength="1" d="M298 436C334 448 372 464 418 500"/><path class="ln a" pathLength="1" d="M182 436L226 486"/><path class="ln a" pathLength="1" d="M298 436L254 486"/><path class="ln b" pathLength="1" d="M200 96C170 110 150 140 142 184"/><path class="ln b" pathLength="1" d="M250 84C214 92 180 116 164 150"/><path class="ln b" pathLength="1" d="M290 90C320 100 338 130 344 176"/><path class="ln b" pathLength="1" d="M150 166Q186 150 218 160"/><path class="ln b" pathLength="1" d="M262 160Q294 150 330 166"/><path class="ln b" pathLength="1" d="M160 219Q184 202 208 219"/><path class="ln b" pathLength="1" d="M272 219Q296 202 320 219"/><path class="ln b" pathLength="1" d="M166 223Q184 234 202 223"/><path class="ln b" pathLength="1" d="M278 223Q296 234 314 223"/><circle class="ln b" pathLength="1" cx="184" cy="216" r="6"/><circle class="ln b" pathLength="1" cx="296" cy="216" r="6"/><path class="ln b" pathLength="1" d="M150 252Q176 278 206 284"/><path class="ln b" pathLength="1" d="M330 252Q304 278 274 284"/><path class="ln b" pathLength="1" d="M241 238C240 262 237 278 232 291Q240 299 249 291"/><path class="ln b" pathLength="1" d="M210 331Q226 319 240 327Q254 319 270 331"/><path class="ln b" pathLength="1" d="M210 331Q240 362 270 331"/><path class="ln b" pathLength="1" d="M212 332Q240 338 268 332"/><circle class="ln b" pathLength="1" cx="355" cy="264" r="3"/><circle class="ln c" pathLength="1" cx="184" cy="215" r="45"/><circle class="ln c" pathLength="1" cx="296" cy="215" r="45"/><path class="ln c" pathLength="1" d="M228 209Q240 199 252 209"/><path class="ln c" pathLength="1" d="M139 213L128 209"/><path class="ln c" pathLength="1" d="M341 213L352 209"/><circle class="ln d" pathLength="1" cx="184" cy="215" r="39"/><circle class="ln d" pathLength="1" cx="296" cy="215" r="39"/><g class="tint"><circle cx="184" cy="215" r="42" fill="url(#lg)"/><circle cx="296" cy="215" r="42" fill="url(#lg)"/><g clip-path="url(#cl)"><path d="M150 2
