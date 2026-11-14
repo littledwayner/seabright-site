@@ -44,13 +44,15 @@ h1{font:400 clamp(40px,7vw,84px)/1.02 var(--serif);letter-spacing:-.01em;margin:
 .index{display:grid;grid-template-columns:repeat(3,1fr);gap:0 32px;margin:48px 0 0;padding:0;list-style:none}
 .index li{border-top:1px solid var(--line)}
 .index a{display:block;padding:20px 0 22px;text-decoration:none;text-align:center}
-.index svg{display:block;width:100%;max-width:230px;height:auto;margin:0 auto 12px;overflow:visible}
+.index svg.f{display:block;width:100%;max-width:230px;height:auto;margin:0 auto 12px;overflow:visible}
 .f path{fill:transparent;stroke:var(--ink);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:fill .25s}
 .index a:hover .f path:not(.br),.index a:focus-visible .f path:not(.br){fill:var(--lens)}
-.index b{display:block;font-weight:500;font-size:18px}
-.draw path{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.4s ease-out .1s forwards}
+.index b{display:block;font-weight:500;font-size:18px;line-height:28px}
+.index .brand-mark{display:flex;align-items:center;justify-content:center;height:28px}
+.index .wordmark{display:block;width:auto;height:14px;overflow:visible}
+.draw .f path{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.4s ease-out .1s forwards}
 @keyframes draw{to{stroke-dashoffset:0}}
-@media (prefers-reduced-motion:reduce){.draw path{animation:none;stroke-dashoffset:0}.f path{transition:none}}
+@media (prefers-reduced-motion:reduce){.draw .f path{animation:none;stroke-dashoffset:0}.f path{transition:none}}
 .note{font-size:14px;color:var(--muted);margin:8px 0 0}
 section{padding:72px 0;border-top:1px solid var(--line)}
 h2{font:400 clamp(30px,4.4vw,48px)/1.1 var(--serif);margin:0 0 20px;max-width:20ch}
@@ -89,8 +91,10 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px 48px;justify-content:space-bet
   .cta .btn{width:100%;padding:12px 14px;font-size:15px}
   .index{grid-template-columns:repeat(2,1fr);gap:0 16px;margin-top:36px}
   .index a{padding:16px 4px 18px}
-  .index svg{max-width:136px;margin-bottom:8px}
-  .index b{font-size:15px}
+  .index svg.f{max-width:136px;margin-bottom:8px}
+  .index b{font-size:15px;line-height:24px}
+  .index .brand-mark{height:24px}
+  .index .wordmark{height:12px}
   .cols,.trio,.forms{grid-template-columns:1fr}
   section{padding:48px 0}
   .panel{padding:28px 20px}
@@ -146,26 +150,3 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px 48px;justify-content:space-bet
   <path class="ln a" pathLength="1" d="M298 436L254 486"/>
   <path class="ln b" pathLength="1" d="M200 96C170 110 150 140 142 184"/>
   <path class="ln b" pathLength="1" d="M250 84C214 92 180 116 164 150"/>
-  <path class="ln b" pathLength="1" d="M290 90C320 100 338 130 344 176"/>
-  <path class="ln b" pathLength="1" d="M150 166Q186 150 218 160"/>
-  <path class="ln b" pathLength="1" d="M262 160Q294 150 330 166"/>
-  <path class="ln b" pathLength="1" d="M160 219Q184 202 208 219"/>
-  <path class="ln b" pathLength="1" d="M272 219Q296 202 320 219"/>
-  <path class="ln b" pathLength="1" d="M166 223Q184 234 202 223"/>
-  <path class="ln b" pathLength="1" d="M278 223Q296 234 314 223"/>
-  <circle class="ln b" pathLength="1" cx="184" cy="216" r="6"/>
-  <circle class="ln b" pathLength="1" cx="296" cy="216" r="6"/>
-  <path class="ln b" pathLength="1" d="M150 252Q176 278 206 284"/>
-  <path class="ln b" pathLength="1" d="M330 252Q304 278 274 284"/>
-  <path class="ln b" pathLength="1" d="M241 238C240 262 237 278 232 291Q240 299 249 291"/>
-  <path class="ln b" pathLength="1" d="M210 331Q226 319 240 327Q254 319 270 331"/>
-  <path class="ln b" pathLength="1" d="M210 331Q240 362 270 331"/>
-  <path class="ln b" pathLength="1" d="M212 332Q240 338 268 332"/>
-  <circle class="ln b" pathLength="1" cx="355" cy="264" r="3"/>
-  <circle class="ln c" pathLength="1" cx="184" cy="215" r="45"/>
-  <circle class="ln c" pathLength="1" cx="296" cy="215" r="45"/>
-  <path class="ln c" pathLength="1" d="M228 209Q240 199 252 209"/>
-  <path class="ln c" pathLength="1" d="M139 213L128 209"/>
-  <path class="ln c" pathLength="1" d="M341 213L352 209"/>
-  <circle class="ln d" pathLength="1" cx="184" cy="215" r="39"/>
-  <circle class="ln d" pathLength="1" cx="296" cy="215"
