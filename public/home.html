@@ -27,8 +27,8 @@ body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 var(--san
 a{color:inherit}
 :focus-visible{outline:2px solid var(--ink);outline-offset:3px}
 .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-header .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between;align-items:center;padding-top:36px;padding-bottom:12px}
-.mark{display:inline-block;margin-left:-0.45em;font-family:var(--sans);font-size:15px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--ink);transition:opacity .2s ease}
+header .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between;align-items:baseline;padding-top:28px;padding-bottom:12px}
+.mark{font-family:var(--sans);font-size:15px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--ink);transition:opacity .2s ease}
 .mark:hover{opacity:.8}
 nav{display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px;font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.04em}
 nav a{text-decoration:none;color:var(--muted);transition:color .2s ease}
@@ -81,7 +81,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px 48px;justify-content:space-bet
 @media (max-width:760px){
   .wrap{padding:0 18px}
   header .wrap{padding-top:24px;padding-bottom:8px;gap:12px 16px}
-  .mark{font-size:14px;margin-left:-0.2em}
+  .mark{font-size:14px}
   nav{width:100%;justify-content:space-between;gap:8px 10px;font-size:12.5px;letter-spacing:.02em}
   .hero{padding:36px 0 32px}
   .lede{font-size:17px;margin-bottom:24px}
@@ -114,7 +114,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px 48px;justify-content:space-bet
 </head>
 <body>
 <header><div class="wrap">
-<a class="mark" href="#top">Seabright Collective</a>
+<a class="mark" href="/home">Seabright Collective</a>
 <nav aria-label="Main">
 <a href="#brands">Brands</a><a href="#retailers">For opticians</a><a href="#for-brands">For brands</a><a href="#stockists">Stockists</a><a href="#contact">Contact</a>
 </nav></div></header>
@@ -181,7 +181,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px 48px;justify-content:space-bet
 <div class="cta"><a class="btn solid" href="#retailers">I’m an optician</a><a class="btn" href="#for-brands">I’m a brand</a></div>
 
 <ul class="index draw" aria-label="Brands we represent">
-<li><a href="/mykita"><svg class="f" viewBox="0 0 120 48" aria-hidden="true"><path pathLength="1" d="M12 24a18 18 0 1 0 36 0a18 18 0 1 0 -36 0Z"/><path pathLength="1" transform="translate(120 0) scale(-1 1)" d="M12 24a18 18 0 1 0 36 0a18 18 0 1 0 -36 0Z"/><path class="br" pathLength="1" d="M48 22Q60 16 72 22"/></svg><b>Mykita</b></a></li>
+<li><a href="/MYKITA"><svg class="f" viewBox="0 0 120 48" aria-hidden="true"><path pathLength="1" d="M12 24a18 18 0 1 0 36 0a18 18 0 1 0 -36 0Z"/><path pathLength="1" transform="translate(120 0) scale(-1 1)" d="M12 24a18 18 0 1 0 36 0a18 18 0 1 0 -36 0Z"/><path class="br" pathLength="1" d="M48 22Q60 16 72 22"/></svg><b>MYKITA</b></a></li>
 <li><a href="#"><svg class="f" viewBox="0 0 120 48" aria-hidden="true"><path pathLength="1" d="M16 8h32a4 4 0 0 1 4 4v24a4 4 0 0 1-4 4H16a4 4 0 0 1-4-4V12a4 4 0 0 1 4-4z"/><path pathLength="1" transform="translate(120 0) scale(-1 1)" d="M16 8h32a4 4 0 0 1 4 4v24a4 4 0 0 1-4 4H16a4 4 0 0 1-4-4V12a4 4 0 0 1 4-4z"/><path class="br" pathLength="1" d="M52 18Q60 14 68 18"/></svg><b>Press Eyewear</b></a></li>
 <li><a href="#"><svg class="f" viewBox="0 0 120 48" aria-hidden="true"><path pathLength="1" d="M10 24a21 15 0 1 0 42 0a21 15 0 1 0 -42 0Z"/><path pathLength="1" transform="translate(120 0) scale(-1 1)" d="M10 24a21 15 0 1 0 42 0a21 15 0 1 0 -42 0Z"/><path class="br" pathLength="1" d="M52 22Q60 17 68 22"/></svg><b>Eyevan</b></a></li>
 <li><a href="#"><svg class="f" viewBox="0 0 120 48" aria-hidden="true"><path pathLength="1" d="M10 18Q10 10 30 10T52 18Q52 40 30 40T10 18Z"/><path pathLength="1" transform="translate(120 0) scale(-1 1)" d="M10 18Q10 10 30 10T52 18Q52 40 30 40T10 18Z"/><path class="br" pathLength="1" d="M52 20Q60 15 68 20"/></svg><b>Thenri</b></a></li>
@@ -229,7 +229,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px 48px;justify-content:space-bet
 <div><label for="o-email">Email</label><input id="o-email" name="email" type="email" data-fs-field required><span class="field-err" data-fs-error="email"></span></div>
 <div><label for="o-city">City and province</label><input id="o-city" name="city_province" type="text" data-fs-field required><span class="field-err" data-fs-error="city_province"></span></div>
 <fieldset><legend>Brands you’d like to see</legend><div class="checks">
-<label><input type="checkbox" name="brands" value="Mykita"> Mykita</label>
+<label><input type="checkbox" name="brands" value="MYKITA"> MYKITA</label>
 <label><input type="checkbox" name="brands" value="Press Eyewear"> Press Eyewear</label>
 <label><input type="checkbox" name="brands" value="Eyevan"> Eyevan</label>
 <label><input type="checkbox" name="brands" value="Thenri"> Thenri</label>
