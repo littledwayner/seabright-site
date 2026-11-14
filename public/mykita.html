@@ -20,11 +20,12 @@ body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--sans
 a{color:inherit}
 :focus-visible{outline:2px solid var(--ink);outline-offset:3px}
 .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-header .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between;align-items:baseline;padding-top:28px}
-.mark{font:400 26px/1 var(--serif);text-decoration:none}
-nav{display:flex;flex-wrap:wrap;gap:6px 24px;font-size:15px}
-nav a{text-decoration:none;color:var(--muted)}
-nav a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:4px}
+header .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between;align-items:baseline;padding-top:28px;padding-bottom:12px}
+.mark{font-family:var(--sans);font-size:15px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--ink);transition:opacity .2s ease}
+.mark:hover{opacity:.8}
+nav{display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px;font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.04em}
+nav a{text-decoration:none;color:var(--muted);transition:color .2s ease}
+nav a:hover{color:var(--ink)}
 .crumb{font-size:15px;color:var(--muted);margin:40px 0 0}
 .hero{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;padding:24px 0 64px}
 h1{margin:0 0 24px;line-height:0}
@@ -65,7 +66,16 @@ input[type=text],input[type=email]{width:100%;font:inherit;color:var(--ink);back
 .brand-aside p{color:var(--muted);margin:0 0 28px;max-width:38ch}
 footer{border-top:1px solid var(--line);padding:40px 0 56px;color:var(--muted);font-size:15px}
 footer .wrap{display:flex;flex-wrap:wrap;gap:16px 48px;justify-content:space-between}
-@media (max-width:760px){.hero,.cols,.contact-split{grid-template-columns:1fr}.facts{grid-template-columns:repeat(2,1fr);gap:20px 24px}.panel{padding:28px 22px}section{padding:48px 0}}
+@media (max-width:760px){
+  .wrap{padding:0 18px}
+  header .wrap{padding-top:24px;padding-bottom:8px;gap:12px 16px}
+  .mark{font-size:14px}
+  nav{width:100%;justify-content:space-between;gap:8px 10px;font-size:12.5px;letter-spacing:.02em}
+  .hero,.cols,.contact-split{grid-template-columns:1fr}
+  .facts{grid-template-columns:repeat(2,1fr);gap:20px 24px}
+  .panel{padding:28px 22px}
+  section{padding:48px 0}
+}
 .cols figure{grid-column:1/-1;margin:24px 0 0}
 .cols figure img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;background:var(--panel)}
 figcaption{font-size:13px;color:var(--muted);margin-top:8px}
