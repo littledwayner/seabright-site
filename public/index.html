@@ -40,6 +40,7 @@ h1{font:400 clamp(40px,7vw,84px)/1.02 var(--serif);letter-spacing:-.01em;margin:
 .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 22px;border:1px solid var(--ink);border-radius:2px;text-decoration:none;font-weight:500;font-size:16px;text-align:center}
 .btn.solid{background:var(--ink);color:var(--bg)}
 .btn:hover{background:var(--lens);color:#0F2530;border-color:var(--lens)}
+.btn:disabled{opacity:.6;cursor:wait}
 .index{display:grid;grid-template-columns:repeat(3,1fr);gap:0 32px;margin:48px 0 0;padding:0;list-style:none}
 .index li{border-top:1px solid var(--line)}
 .index a{display:block;padding:20px 0 22px;text-decoration:none;text-align:center}
@@ -59,7 +60,7 @@ p{margin:0 0 16px;max-width:60ch}
 .steps li{counter-increment:s;padding:0 0 22px 48px;position:relative;max-width:56ch}
 .steps li::before{content:counter(s);position:absolute;left:0;top:0;width:30px;height:30px;border:1px solid var(--ink);border-radius:50%;display:grid;place-items:center;font-size:14px}
 .steps b{display:block;font-weight:600}
-.panel{background:var(--panel);padding:40px}.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin:28px 0}h3{font:500 20px/1.3 var(--sans);margin:0 0 8px}.trio p{font-size:16px;margin:0}.forms{display:grid;grid-template-columns:1fr 1fr;gap:56px}form{display:grid;gap:20px;margin-top:24px}label{display:block;font-size:14px;color:var(--muted);margin-bottom:4px}input[type=text],input[type=email],select,textarea{width:100%;font:inherit;color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--ink);border-radius:0;padding:8px 0}textarea{min-height:72px;resize:vertical}fieldset{border:0;padding:0;margin:0}legend{font-size:14px;color:var(--muted);margin-bottom:8px;padding:0}.checks{display:grid;grid-template-columns:repeat(2,1fr);gap:8px 16px}.checks label{display:flex;gap:8px;align-items:center;color:var(--ink);font-size:16px;margin:0}button.btn{cursor:pointer;font:inherit;font-weight:500;justify-self:start}.status{min-height:1.4em;margin:0;font-size:15px}
+.panel{background:var(--panel);padding:40px}.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin:28px 0}h3{font:500 20px/1.3 var(--sans);margin:0 0 8px}.trio p{font-size:16px;margin:0}.forms{display:grid;grid-template-columns:1fr 1fr;gap:56px}form{display:grid;gap:20px;margin-top:24px}label{display:block;font-size:14px;color:var(--muted);margin-bottom:4px}input[type=text],input[type=email],select,textarea{width:100%;font:inherit;color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--ink);border-radius:0;padding:8px 0}textarea{min-height:72px;resize:vertical}fieldset{border:0;padding:0;margin:0}legend{font-size:14px;color:var(--muted);margin-bottom:8px;padding:0}.checks{display:grid;grid-template-columns:repeat(2,1fr);gap:8px 16px}.checks label{display:flex;gap:8px;align-items:center;color:var(--ink);font-size:16px;margin:0}button.btn{cursor:pointer;font:inherit;font-weight:500;justify-self:start}.status{min-height:1.4em;margin:0;font-size:15px}.field-err{display:block;font-size:13px;color:#b91c1c;margin-top:4px}
 footer{border-top:1px solid var(--line);padding:40px 0 56px;color:var(--muted);font-size:15px}
 footer .wrap{display:flex;flex-wrap:wrap;gap:16px 48px;justify-content:space-between}
 @media (max-width:760px){
@@ -122,7 +123,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px 48px;justify-content:space-bet
 <li><a href="#"><svg class="f" viewBox="0 0 120 48" aria-hidden="true"><path pathLength="1" d="M10 10H52Q52 40 32 40Q10 38 10 10Z"/><path pathLength="1" transform="translate(120 0) scale(-1 1)" d="M10 10H52Q52 40 32 40Q10 38 10 10Z"/><path class="br" pathLength="1" d="M52 14Q60 10 68 14"/></svg><b>Vada</b></a></li>
 <li><a href="#"><svg class="f" viewBox="0 0 120 48" aria-hidden="true"><path pathLength="1" d="M20 8H44L54 24L44 40H20L10 24Z"/><path pathLength="1" transform="translate(120 0) scale(-1 1)" d="M20 8H44L54 24L44 40H20L10 24Z"/><path class="br" pathLength="1" d="M54 22Q60 18 66 22"/></svg><b>OGI</b></a></li>
 </ul>
-<p class="note">Each brand page will carry its collection, price tier and a line sheet request.</p>
+<p class="note">Each brand page will carry its collection, price tier and an information request.</p>
 </div>
 
 <section id="why"><div class="wrap"><h2>A short list, shown properly.</h2><div class="trio"><div><h3>Few brands, chosen with care</h3><p>Independent and luxury makers with a real point of view, so every line on your wall has a reason to be there.</p></div><div><h3>Placed where it fits</h3><p>We don’t chase door counts. Each brand goes to shops that suit it, which protects your margins and keeps a line from showing up everywhere.</p></div><div><h3>We show up</h3><p>Seasonal previews, full sample collections, and a rep who knows your shop and your customers.</p></div></div></div></section>
@@ -148,11 +149,61 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px 48px;justify-content:space-bet
 <div><p>Jarrett spent years carrying suitcases of frames from Vancouver to Montréal, one independent shop at a time. A former actor, he knows how to tell a brand’s story in a room. Seabright Creative is that same approach, with a team behind it.</p><p class="note">Draft biography for Jarrett to confirm.</p></div></div></section>
 </main>
 
-<section id="forms"><div class="wrap forms"><div id="request"><h2>Request a visit</h2><p>Tell us about your shop and which brands interest you. A rep in your region will reply.</p><form><div><label for="o-name">Your name</label><input id="o-name" type="text" required></div><div><label for="o-shop">Shop name</label><input id="o-shop" type="text" required></div><div><label for="o-email">Email</label><input id="o-email" type="email" required></div><div><label for="o-city">City and province</label><input id="o-city" type="text" required></div><fieldset><legend>Brands you’d like to see</legend><div class="checks"><label><input type="checkbox"> Mykita</label><label><input type="checkbox"> Press Eyewear</label><label><input type="checkbox"> Eyevan</label><label><input type="checkbox"> Thenri</label><label><input type="checkbox"> Salt Eyewear</label><label><input type="checkbox"> LA Eyeworks</label><label><input type="checkbox"> Sestini</label><label><input type="checkbox"> Thom Browne</label><label><input type="checkbox"> Tejesta</label><label><input type="checkbox"> Vada</label><label><input type="checkbox"> OGI</label></div></fieldset><div><label for="o-how">How did you hear about us?</label><select id="o-how"><option>Choose one</option><option>A Seabright rep</option><option>A trade show</option><option>A brand</option><option>Another optician</option><option>Online search</option><option>Other</option></select></div><div><label for="o-msg">Anything else? (optional)</label><textarea id="o-msg"></textarea></div><button class="btn solid" type="submit">Request a visit</button><p class="status" role="status"></p></form></div><div id="submit-brand"><h2>Submit your brand</h2><p>Tell us about your collection and how it sells today. We take on a small number of brands, and we read every submission.</p><form><div><label for="b-brand">Brand name</label><input id="b-brand" type="text" required></div><div><label for="b-name">Your name and role</label><input id="b-name" type="text" required></div><div><label for="b-email">Email</label><input id="b-email" type="email" required></div><div><label for="b-site">Website</label><input id="b-site" type="text" required></div><div><label for="b-sold">Where is it sold today?</label><textarea id="b-sold"></textarea></div><div><label for="b-rep">Do you have Canadian representation?</label><select id="b-rep"><option>Choose one</option><option>No</option><option>Yes, but we’re open to change</option><option>Yes, and it’s working well</option></select></div><div><label for="b-note">Anything else? (optional)</label><textarea id="b-note"></textarea></div><button class="btn solid" type="submit">Submit your brand</button><p class="status" role="status"></p></form></div></div></section>
+<section id="forms"><div class="wrap forms">
+<div id="request"><h2>Request a visit</h2><p>Tell us about your shop and which brands interest you. A rep in your region will reply.</p>
+<form id="optician-form">
+<input type="hidden" name="form_type" value="Optician Visit Request">
+<div><label for="o-name">Your name</label><input id="o-name" name="name" type="text" data-fs-field required><span class="field-err" data-fs-error="name"></span></div>
+<div><label for="o-shop">Shop name</label><input id="o-shop" name="shop_name" type="text" data-fs-field required><span class="field-err" data-fs-error="shop_name"></span></div>
+<div><label for="o-email">Email</label><input id="o-email" name="email" type="email" data-fs-field required><span class="field-err" data-fs-error="email"></span></div>
+<div><label for="o-city">City and province</label><input id="o-city" name="city_province" type="text" data-fs-field required><span class="field-err" data-fs-error="city_province"></span></div>
+<fieldset><legend>Brands you’d like to see</legend><div class="checks">
+<label><input type="checkbox" name="brands" value="Mykita"> Mykita</label>
+<label><input type="checkbox" name="brands" value="Press Eyewear"> Press Eyewear</label>
+<label><input type="checkbox" name="brands" value="Eyevan"> Eyevan</label>
+<label><input type="checkbox" name="brands" value="Thenri"> Thenri</label>
+<label><input type="checkbox" name="brands" value="Salt Eyewear"> Salt Eyewear</label>
+<label><input type="checkbox" name="brands" value="LA Eyeworks"> LA Eyeworks</label>
+<label><input type="checkbox" name="brands" value="Sestini"> Sestini</label>
+<label><input type="checkbox" name="brands" value="Thom Browne"> Thom Browne</label>
+<label><input type="checkbox" name="brands" value="Tejesta"> Tejesta</label>
+<label><input type="checkbox" name="brands" value="Vada"> Vada</label>
+<label><input type="checkbox" name="brands" value="OGI"> OGI</label>
+</div></fieldset>
+<div><label for="o-how">How did you hear about us?</label><select id="o-how" name="referral_source"><option value="">Choose one</option><option value="A Seabright rep">A Seabright rep</option><option value="A trade show">A trade show</option><option value="A brand">A brand</option><option value="Another optician">Another optician</option><option value="Online search">Online search</option><option value="Other">Other</option></select></div>
+<div><label for="o-msg">Anything else? (optional)</label><textarea id="o-msg" name="message"></textarea></div>
+<button class="btn solid" type="submit" data-fs-submit-btn>Request a visit</button>
+<p class="status" role="status" data-fs-success>Thank you. Your visit request has been sent and a rep in your region will reply shortly.</p>
+<p class="status" role="alert" data-fs-error></p>
+</form></div>
+
+<div id="submit-brand"><h2>Submit your brand</h2><p>Tell us about your collection and how it sells today. We take on a small number of brands, and we read every submission.</p>
+<form id="brand-form">
+<input type="hidden" name="form_type" value="Brand Representation Submission">
+<div><label for="b-brand">Brand name</label><input id="b-brand" name="brand_name" type="text" data-fs-field required><span class="field-err" data-fs-error="brand_name"></span></div>
+<div><label for="b-name">Your name and role</label><input id="b-name" name="name_role" type="text" data-fs-field required><span class="field-err" data-fs-error="name_role"></span></div>
+<div><label for="b-email">Email</label><input id="b-email" name="email" type="email" data-fs-field required><span class="field-err" data-fs-error="email"></span></div>
+<div><label for="b-site">Website</label><input id="b-site" name="website" type="text" data-fs-field required><span class="field-err" data-fs-error="website"></span></div>
+<div><label for="b-sold">Where is it sold today?</label><textarea id="b-sold" name="current_distribution"></textarea></div>
+<div><label for="b-rep">Do you have Canadian representation?</label><select id="b-rep" name="canadian_representation"><option value="">Choose one</option><option value="No">No</option><option value="Yes, but we’re open to change">Yes, but we’re open to change</option><option value="Yes, and it’s working well">Yes, and it’s working well</option></select></div>
+<div><label for="b-note">Anything else? (optional)</label><textarea id="b-note" name="message"></textarea></div>
+<button class="btn solid" type="submit" data-fs-submit-btn>Submit your brand</button>
+<p class="status" role="status" data-fs-success>Thank you. Your brand submission has been received.</p>
+<p class="status" role="alert" data-fs-error></p>
+</form></div>
+</div></section>
+
 <footer id="contact"><div class="wrap">
 <div><strong>Seabright Creative</strong><br>Independent eyewear representation<br>Vancouver, British Columbia</div>
 <div>hello@seabrighteyewear.ca<br>000 000 0000</div>
 <div>© 2026 Seabright Creative Inc.</div>
 </div></footer>
-<script>document.querySelectorAll('form').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();f.querySelector('.status').textContent='Thanks. This is a mock-up, so nothing was sent.';f.reset()})})</script></body>
+
+<script>
+window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+formspree('initForm', { formElement: '#optician-form', formId: 'meagergg' });
+formspree('initForm', { formElement: '#brand-form', formId: 'meagergg' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+</body>
 </html>
